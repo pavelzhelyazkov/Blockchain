@@ -20,7 +20,7 @@ contract NetMon {
 
         for(i = 0; i < hosts.length; i++)
         {
-            if(keccak256(abi.encodePacked(hosts[i].hostname)) == keccak256(abi.encodePacked(hostname))) {
+            if (cmpStr(hosts[i].hostname, hostname)) {
                 return false;
             }
         }
@@ -39,7 +39,7 @@ contract NetMon {
 
         for(i = 0; i < hosts.length; i++)
         {
-            if (keccak256(abi.encodePacked(hosts[i].hostname)) == keccak256(abi.encodePacked(hostname))) {
+            if (cmpStr(hosts[i].hostname, hostname)) {
                 hosts[i].state = hostState;
                 return true;
             }
@@ -56,7 +56,7 @@ contract NetMon {
 
         for(i = 0; i < hosts.length; i++)
         {
-            if (keccak256(abi.encodePacked(hosts[i].hostname)) == keccak256(abi.encodePacked(hostname))) {
+            if (cmpStr(hosts[i].hostname, hostname)) {
                 return hosts[i].state;
             }
         }
@@ -67,5 +67,13 @@ contract NetMon {
 
     function getAllHostsState() public view returns (monData[] memory) {
         return hosts;
+    }
+
+    function cmpStr(string memory str1, string memory str2) private pure returns (bool) {
+        if (keccak256(abi.encodePacked(str1)) == keccak256(abi.encodePacked(str2))) {
+            return true;
+        }
+
+        return false;
     }
 }
