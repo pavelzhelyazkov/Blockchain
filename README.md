@@ -1,8 +1,9 @@
 # Blockchain UniBit course work
 
-netmon.sol - Smart ontract (NetMon)
+NetmonSC.sln - Visual Studio C# console project
+NetMonSC/netmon.sol - Smart ontract (NetMon)
+BetMonSC/Program.cs - Main Program (Console)
 
-NetmonSC - Visual Studio C# console project
 
 
 Демонстрира създаването на смарт контракт за Ethereum чрез Solidity. Смарт контрактът съхранява масив от структурирани данни за ping състояние на мрежови хостове. Състоянието на отделните хостове може да се извлича чрез getHostState функция и съответно да се променя чрез setHostState функция. Извличане на състоянието на всички добавени хостове чрез функция addHost се прави посредством getAllHostsState.
