@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NetmonSC": {
+      "commandName": "Project",
+      "commandLineArgs": "getstate microsoft.com"
+    }
+  }
+}
