@@ -2,7 +2,7 @@
 
 NetmonSC.sln - Visual Studio C# console project
 
-NetMonSC/netmon.sol - Smart ontract (NetMon)
+NetMonSC/netmon.sol - Solidity Smart ontract (NetMon)
 
 NetMonSC/NetMon - C# Nethereum Contract Defenition
 
